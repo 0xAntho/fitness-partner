@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import PwaInit from "@/components/PwaInit";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en" className={`${geist.variable} h-full antialiased`}>
       <body className="min-h-full bg-zinc-950 text-zinc-100 font-sans">
         {children}
+        <PwaInit />
       </body>
     </html>
   );
